@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nawaira Bashir</title>
+    <link rel="stylesheet" href="prof.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Sample styles for active tab and content */
+        .active-link {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        .tab-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>N</span>awaira.
+                </div>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Nawaira Bashir</span><br>from Pakistan.</h1>
+                  <br>
+                         <a href="NAwaira bashir,CV.pdf" download class="btn">Download Cv</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="about-col-2">
+            <h1>About me</h1>
+            <p>Hey! I'm Nawaira Bashir, A Passionate Front-End Developer In The Making. As A Passionate Begginer Front-end Developer. I'm Dedicated To Honing My Skill In HTML, CSS And JavaScript. I'm Constantly Learning And Exploring New Technologies, Eager To Push The Boundries Of What Can Be Achieved On The Web. </p>
+            <div class="tab-title">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-content active-tab" id="skills">
+                <ul>
+                    <li><span>Web Developer</span><br>HTML, CSS and JavaScript</li>
+                    <li><span>Programming</span><br>C++, OOP</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="experience">
+                <ul>
+                    <li><span>Intern</span><br>Program-Tech</li>
+                    <li><span>Telecommunication</span><br>Humanatic</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="education">
+                <ul>
+                    <li><span>Current</span><br>BS (Software Engineering) at International Islamic University</li>
+                    <li><span>2022</span><br>Pre-Engineering at Apsacs</li>
+                    <li><span>2018</span><br>Science at Apsacs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+        <h1 class="sub-title"> My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2> <i class="fa-brands fa-html5"></i><span>Html</span></h2>
+                <br>
+                <p>Solid foundation in html: Skilled in creating the core struture and content of Web pages. Experience with semantic HTML: Understand the use of semantic element for better accessibility and organization.</p>
+                <br> 
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2> <i class="fa-brands fa-css3-alt"></i> <span>Css</span></h2>
+                <br>
+                <p>Proficient in CSS: Capable os styling web pages using Css selector, properties and layot techniques experience with responsive design: can create website that adapt to different screen sizes.</p>
+                <br>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2> <i class="fa-brands fa-js"></i> <span> JavaScript</span></h2>
+                <br>
+                <p>Understanding is JacaScript fundamental: Able to use JavaScript for basic interactivity and DOM manipulation working knowledge of JacaScript: can write JacaScript cide to create dynamic and interactive web experiences.</p>
+                <br> 
+                <a href="#">learn more</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+               <h1 class="sub-title">Contact Me</h1>
+               <br>
+               <p> <span> Email: </span> nawairabashir9@gmail.com</p>
+               <br>
+               <p> <span>Phone no: </span>03189132364</p>
+               
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required >
+                         <input type="email" name="email" placeholder="Your Email" required >
+                         <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                         <button type="submit" class="btn">Submit</button>
+                        
+                    
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ nawaira.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.querySelectorAll(".tab-links");
+        var tabcontents = document.querySelectorAll(".tab-content");
+
+        function opentab(tabname) {
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
